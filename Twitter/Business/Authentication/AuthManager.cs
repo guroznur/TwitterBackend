@@ -65,9 +65,9 @@ namespace Business.Authentication
         public async Task<IResult> Register(RegisterAuthDto registerDto)
         {
             IResult result = BusinessRules.Run(
-                await CheckIfEmailExists(registerDto.Email),
-                CheckIfImageExtesionsAllow(registerDto.Image.FileName),
-                CheckIfImageSizeIsLessThanOneMb(registerDto.Image.Length)
+                await CheckIfEmailExists(registerDto.Email)
+                //CheckIfImageExtesionsAllow(registerDto.Image.FileName),
+                //CheckIfImageSizeIsLessThanOneMb(registerDto.Image.Length)
                 );
 
             if (result != null)
@@ -111,6 +111,6 @@ namespace Business.Authentication
             return new SuccessResult();
         }
 
-       
+
     }
 }

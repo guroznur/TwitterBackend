@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hgdiC5j420vjs2yQCKAN1SNtFq5YGTU/uoYBXHB83/rUkeoO6/6ytuvvi2X9WHQgaNIvxztJIqwFBcbEhY47Ig==",
+  "dgSpecHash": "8HTSCjGWWCGM/f3fkfMG2Km1EjqLm84YvYtTEZwV3h+vGoWMvloy2/9L5WDOYKwUXJJeRqSfxBokC6mMI4NJhg==",
   "success": true,
-  "projectFilePath": "C:\\TwitterWebApi\\Twitter\\Twitter\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Twitter\\Twitter\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\castle.core\\5.0.0\\castle.core.5.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\fluentvalidation\\11.1.0\\fluentvalidation.11.1.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q9QH8PdnSM3AYXZ6Xt5YvV34MWHgY30YuRU+KH/1CU+r7ieHUEEQnup4iDAEMbOj2pQJ1ODEuTvFv+HbVX4LlA==",
+  "dgSpecHash": "UC3BLfq3YvRUOj7VWr6C36dcWQQytZ20JRuhHG4GqRa/NxUL01UVgaYiyfkeUtF618lQ0q5iA/9edIGAsqKAxw==",
   "success": true,
-  "projectFilePath": "C:\\TwitterWebApi\\Twitter\\Twitter\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Twitter\\Twitter\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

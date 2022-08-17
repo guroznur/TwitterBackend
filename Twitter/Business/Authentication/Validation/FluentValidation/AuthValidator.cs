@@ -9,8 +9,7 @@ namespace Business.ValidationRules.FluentValidation
         {
             RuleFor(p => p.Name).NotEmpty().WithMessage("Kullanıcı adı boş olamaz");
             RuleFor(p => p.Email).NotEmpty().WithMessage("Mail adresi boş olamaz");
-            RuleFor(p => p.Email).EmailAddress().WithMessage("Geçerli bir mail adresi yazın");
-            RuleFor(p => p.Image.FileName).NotEmpty().WithMessage("Kullanıcı resmi boş olamaz");
+            RuleFor(p => p.Email).EmailAddress().WithMessage("Geçerli bir mail adresi yazın");            
             RuleFor(p => p.Password).NotEmpty().WithMessage("Şifre boş olamaz");
             RuleFor(p => p.Password).MinimumLength(6).WithMessage("Şifre en az 6 karakter olmalıdır");
             RuleFor(p => p.Password).Matches("[A-Z]").WithMessage("Şifreniz en az 1 adet büyük harf içermelidir");

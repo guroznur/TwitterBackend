@@ -25,7 +25,7 @@ namespace Business.Repositories.UrlRepository
             _urlDal = urlDal;
         }
 
-        [SecuredAspect()]
+        //[SecuredAspect()]
         [ValidationAspect(typeof(UrlValidator))]
         [RemoveCacheAspect("UrlService.Get")]
         public async Task<IResult> Add(Url url)

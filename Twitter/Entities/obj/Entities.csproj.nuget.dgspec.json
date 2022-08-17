@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\TwitterWebApi\\Twitter\\Twitter\\Entities\\Entities.csproj": {}
+    "C:\\Twitter\\Twitter\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\TwitterWebApi\\Twitter\\Twitter\\Entities\\Entities.csproj": {
+    "C:\\Twitter\\Twitter\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\TwitterWebApi\\Twitter\\Twitter\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Twitter\\Twitter\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\TwitterWebApi\\Twitter\\Twitter\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Twitter\\Twitter\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\TwitterWebApi\\Twitter\\Twitter\\Entities\\obj\\",
+        "outputPath": "C:\\Twitter\\Twitter\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",

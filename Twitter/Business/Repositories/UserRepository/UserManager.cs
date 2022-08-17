@@ -32,13 +32,13 @@ namespace Business.Repositories.UserRepository
         [RemoveCacheAspect("IUserService.Get")]
         public async Task Add(RegisterAuthDto registerDto)
         {
-            string fileName = _fileService.FileSaveToServer(registerDto.Image, "./Content/Img/");
+            //string fileName = _fileService.FileSaveToServer(registerDto.Image, "./Content/Img/");
             //string fileName = _fileService.FileSaveToFtp(registerDto.Image);
             //byte[] fileByteArray = _fileService.FileConvertByteArrayToDatabase(registerDto.Image);
 
             string confirmValue = await CreateConfirmValue();
 
-            var user = CreateUser(registerDto, fileName);
+            var user = CreateUser(registerDto);
 
             user.ConfirmValue = confirmValue;
 
@@ -60,7 +60,7 @@ namespace Business.Repositories.UserRepository
             return value;
         }
 
-        private static User CreateUser(RegisterAuthDto registerDto, string fileName)
+        private static User CreateUser(RegisterAuthDto registerDto)
         {
             byte[] passwordHash, paswordSalt;
             HashingHelper.CreatePassword(registerDto.Password, out passwordHash, out paswordSalt);
@@ -71,7 +71,7 @@ namespace Business.Repositories.UserRepository
             user.Name = registerDto.Name;
             user.PasswordHash = passwordHash;
             user.PasswordSalt = paswordSalt;
-            user.ImageUrl = fileName;
+            
             return user;
         }
 
