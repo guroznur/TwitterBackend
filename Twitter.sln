@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "Twitter\WebAPI\WebAPI.csproj", "{DC0BBC04-2FA7-496D-A423-CEE225400275}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "Twitter\WebAPI\WebAPI.csproj", "{DC0BBC04-2FA7-496D-A423-CEE225400275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Twitter\Business\Business.csproj", "{AB64FF41-FF5D-4BAA-A893-9A4359D25867}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Twitter\Business\Business.csproj", "{AB64FF41-FF5D-4BAA-A893-9A4359D25867}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "Twitter\DataAccess\DataAccess.csproj", "{8722F9AB-782E-40C5-8ED3-F853852411A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "Twitter\DataAccess\DataAccess.csproj", "{8722F9AB-782E-40C5-8ED3-F853852411A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Twitter\Core\Core.csproj", "{3F4754D0-2944-4F63-AE3A-0D77D6FE52BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Twitter\Core\Core.csproj", "{3F4754D0-2944-4F63-AE3A-0D77D6FE52BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Twitter\Entities\Entities.csproj", "{7F3CF778-A7E8-4E40-988E-E440C90420E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Twitter\Entities\Entities.csproj", "{7F3CF778-A7E8-4E40-988E-E440C90420E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{F80F0027-BA74-42BB-8DFF-3C9E8956E445}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7F3CF778-A7E8-4E40-988E-E440C90420E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F3CF778-A7E8-4E40-988E-E440C90420E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F3CF778-A7E8-4E40-988E-E440C90420E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F80F0027-BA74-42BB-8DFF-3C9E8956E445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80F0027-BA74-42BB-8DFF-3C9E8956E445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80F0027-BA74-42BB-8DFF-3C9E8956E445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80F0027-BA74-42BB-8DFF-3C9E8956E445}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

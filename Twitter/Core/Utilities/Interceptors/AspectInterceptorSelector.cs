@@ -7,12 +7,21 @@ namespace Core.Utilities.Interceptors
     {
         public IInterceptor[] SelectInterceptors(Type type, MethodInfo method, IInterceptor[] interceptors)
         {
-            var classAttributes = type.GetCustomAttributes<MethodInterceptionBaseAttribute>(true).ToList();
-            var methodAttribues = type.GetMethod(method.Name)
+            var classAttributes = type.GetCustomAttributes<MethodInterceptionBaseAttribute>
+                (true).ToList();
+            var methodAttributes = type.GetMethod(method.Name)
                 .GetCustomAttributes<MethodInterceptionBaseAttribute>(true);
-            classAttributes.AddRange(methodAttribues);
+            classAttributes.AddRange(methodAttributes);
+            
 
-            return classAttributes.ToArray();
+            return classAttributes.OrderBy(x => x.Priority).ToArray();
+
+            //var classAttributes = type.GetCustomAttributes<MethodInterceptionBaseAttribute>(true).ToList();
+            //var methodAttribues = type.GetMethod(method.Name)
+            //    .GetCustomAttributes<MethodInterceptionBaseAttribute>(true);
+            //classAttributes.AddRange(methodAttribues);
+
+            //return classAttributes.ToArray();
         }
     }
 }

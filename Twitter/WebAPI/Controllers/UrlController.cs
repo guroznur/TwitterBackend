@@ -73,5 +73,16 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result.Message);
         }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> Get()
+        {
+            var result = await _urlService.GetList();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
+        }
     }
 }

@@ -17,19 +17,19 @@ builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterMod
 // Add services to the container.
 builder.Services.AddControllers();
 
-//Site bazlý izin bermek istiyorsak bura kullanýlmalý
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowOrigin",
-        builder => builder.WithOrigins("https://localhost:4200", "yeni site", "yeni 2"));
-});
 
-//Eðer tüm istekleri karþýlamak istiyorsak
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowOrigin",
-        builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
-});
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowOrigin",
+//        builder => builder.WithOrigins("https://localhost:4200", "yeni site", "yeni 2"));
+//});
+
+
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowOrigin",
+//        builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+//});
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
@@ -66,7 +66,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+{
+    app.UseCors(x => x
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
 
+
+}
 
 
 // Configure the HTTP request pipeline.
@@ -78,7 +85,7 @@ if (app.Environment.IsDevelopment())
 
 app.ConfigureCustomExcepitonMiddleware();
 
-app.UseCors("AllowOrigin");
+app.UseCors();
 
 app.UseHttpsRedirection();
 

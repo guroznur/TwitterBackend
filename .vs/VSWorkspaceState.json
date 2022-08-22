@@ -3,9 +3,13 @@
     "",
     "\\Twitter",
     "\\Twitter\\Business",
-    "\\Twitter\\Business\\Aspects",
-    "\\Twitter\\Business\\Aspects\\Secured",
-    "\\Twitter\\WebAPI"
+    "\\Twitter\\Business\\Authentication",
+    "\\Twitter\\Core",
+    "\\Twitter\\Entities",
+    "\\Twitter\\Entities\\Concrete",
+    "\\Twitter\\Entities\\Dtos",
+    "\\Twitter\\WebAPI",
+    "\\Twitter\\WebAPI\\Controllers"
   ],
   "SelectedNode": "\\Twitter.sln",
   "PreviewInSolutionExplorer": false

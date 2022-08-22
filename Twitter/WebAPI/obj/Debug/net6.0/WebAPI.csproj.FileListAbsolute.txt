@@ -160,3 +160,12 @@ C:\Twitter\Twitter\WebAPI\obj\Debug\net6.0\refint\WebAPI.dll
 C:\Twitter\Twitter\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\Twitter\Twitter\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Twitter\Twitter\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Google.Apis.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Google.Apis.Core.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Twitter\Twitter\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

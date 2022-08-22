@@ -4,12 +4,16 @@ using Core.Utilities.Interceptors;
 using FluentValidation;
 
 namespace Core.Aspects.Validation
-{
-    public class ValidationAspect : MethodInterception
+{  public class ValidationAspect : MethodInterception
     {
         private Type _validatorType;
         public ValidationAspect(Type validatorType)
         {
+            if (!typeof(IValidator).IsAssignableFrom(validatorType))
+            {
+                throw new System.Exception("Yanlış tip ataması.");
+            }
+
             _validatorType = validatorType;
         }
         protected override void OnBefore(IInvocation invocation)

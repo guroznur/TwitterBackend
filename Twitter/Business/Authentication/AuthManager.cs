@@ -10,6 +10,7 @@ using Core.Utilities.Result.Concrete;
 using Core.Utilities.Security.JWT;
 using Entities.Concrete;
 using Entities.Dtos;
+using Google.Apis.Auth;
 
 namespace Business.Authentication
 {
@@ -22,6 +23,7 @@ namespace Business.Authentication
         {
             _userService = userService;
             _tokenHandler = tokenHandler;
+            
         }
 
         public async Task<IDataResult<Token>> Login(LoginAuthDto loginDto)
@@ -45,17 +47,24 @@ namespace Business.Authentication
             return new ErrorDataResult<Token>("Kullanıcı maili ya da şifre bilgisi yanlış");
         }
 
-        public Task<IDataResult<Token>> GoogleLogin(GoogleLoginAuthDto googleLoginDto)
+        public async Task<IDataResult<Token>> GoogleLogin(GoogleLoginAuthDto googleLoginDto)
+        {
+            //var settings = new GoogleJsonWebSignature.ValidationSettings()
+            //{
+            //    Audience = new List<string> { "599983187895-au9tcpp3b4rrbuothav2ah37osui3r43.apps.googleusercontent.com" }
+            //};
+            //var payload = await GoogleJsonWebSignature.ValidateAsync(googleLoginDto.IdToken, settings);
+            //new UserLogin(googleLoginDto.Provider, payload.Subject, googleLoginDto.Provider);
+            throw new NotImplementedException();
+        }
+
+
+        public async Task<IDataResult<Token>> FacebookLogin(FacebookLoginAuthDto facebookLoginDto)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IDataResult<Token>> FacebookLogin(FacebookLoginAuthDto facebookLoginDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IDataResult<Token>> TwitterLogin(TwitterLoginAuthDto twitterLoginDto)
+        public async Task<IDataResult<Token>> TwitterLogin(TwitterLoginAuthDto twitterLoginDto)
         {
             throw new NotImplementedException();
         }
@@ -66,8 +75,8 @@ namespace Business.Authentication
         {
             IResult result = BusinessRules.Run(
                 await CheckIfEmailExists(registerDto.Email)
-                //CheckIfImageExtesionsAllow(registerDto.Image.FileName),
-                //CheckIfImageSizeIsLessThanOneMb(registerDto.Image.Length)
+            //    //CheckIfImageExtesionsAllow(registerDto.Image.FileName),
+            //    //CheckIfImageSizeIsLessThanOneMb(registerDto.Image.Length)
                 );
 
             if (result != null)

@@ -34,7 +34,7 @@ namespace Business.Repositories.UrlRepository
             return new SuccessResult(UrlMessages.AddedTweetUrl);
         }
 
-        [SecuredAspect()]
+        //[SecuredAspect("admin")]
         [RemoveCacheAspect("UrlService.Get")]
         public async Task<IResult> Delete(Url url)
         {
@@ -44,7 +44,7 @@ namespace Business.Repositories.UrlRepository
 
         public async Task<IDataResult<Url>> GetById(int id)
         {
-            return new SuccessDataResult<Url>(await _urlDal.Get(p => p.Id == id));
+            return new SuccessDataResult<Url>(await _urlDal.Get(p => p.UserId == id));
         }
 
         [CacheAspect()]
